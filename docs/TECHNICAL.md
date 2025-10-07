@@ -24,7 +24,7 @@ async def google_oauth_callback():
     pass
 ```
 
-**Key Features**:
+Key Features:
 - JWT-based authentication with refresh tokens
 - OAuth2 integration (Google)
 - Rate limiting and security headers
@@ -47,7 +47,7 @@ class AISchemaEnhancer:
         return self._validate_relationships(rule_relationships + ai_relationships, tables)
 ```
 
-**AI Integration**:
+AI Integration:
 - Dual provider support (OpenAI GPT-4 + Google Gemini)
 - Intelligent fallback mechanisms
 - Context-aware prompt engineering
@@ -71,7 +71,7 @@ class CodeGenerator:
         return CodeGenerationResult(code=code, metadata=metadata)
 ```
 
-**Supported Formats**:
+Supported Formats:
 - SQLAlchemy, Prisma, TypeORM, Django ORM
 - Raw SQL, JSON Schema, DBML
 - TypeScript interfaces, Python dataclasses
@@ -95,7 +95,7 @@ class CloudDatabaseManager:
         return migration_plan
 ```
 
-**Migration Capabilities**:
+Migration Capabilities:
 - Multi-database support (PostgreSQL, MySQL, SQLite, Oracle, SQL Server, MongoDB)
 - Cloud provider integration (AWS RDS, Azure Database, Google Cloud SQL)
 - Infrastructure-as-Code generation (CloudFormation, Terraform)
@@ -124,7 +124,7 @@ class ConnectionManager:
                 await websocket.send_text(message_str)
 ```
 
-**Real-time Features**:
+Real-time Features:
 - Live dashboard statistics
 - Collaborative schema editing
 - Push notifications
@@ -135,13 +135,13 @@ class ConnectionManager:
 ### RESTful API Structure
 
 ```
-/api/auth/*              → Authentication Service
-/api/schema/*            → Schema Detection Service  
-/api/generate/*          → Code Generation Service
-/api/database/*          → Database Migration Service
-/api/projects/*          → Project Management Service
-/api/chat/*              → AI Chat Service
-/ws/*                    → WebSocket Real-time Service
+/api/auth/              → Authentication Service
+/api/schema/            → Schema Detection Service  
+/api/generate/          → Code Generation Service
+/api/database/          → Database Migration Service
+/api/projects/          → Project Management Service
+/api/chat/              → AI Chat Service
+/ws/                    → WebSocket Real-time Service
 ```
 
 ### Error Handling Strategy
@@ -471,7 +471,7 @@ async def process_multiple_schemas(schema_requests):
         for request in schema_requests
     ]
     
-    results = await asyncio.gather(*tasks, return_exceptions=True)
+    results = await asyncio.gather(tasks, return_exceptions=True)
     
     # Handle results and exceptions
     successful_results = [

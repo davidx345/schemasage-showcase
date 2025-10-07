@@ -2,7 +2,7 @@
 
 ## System Overview
 
-SchemaSage is built as a **distributed microservices platform** designed for enterprise-scale schema intelligence and database migration. The architecture emphasizes scalability, security, and real-time collaboration.
+SchemaSage is built as a distributed microservices platform designed for enterprise-scale schema intelligence and database migration. The architecture emphasizes scalability, security, and real-time collaboration.
 
 ## High-Level Architecture
 
@@ -93,8 +93,8 @@ SchemaSage is built as a **distributed microservices platform** designed for ent
 ## Service Details
 
 ### 1. Authentication Service
-**Technology**: FastAPI, PostgreSQL, JWT, OAuth2  
-**Responsibilities**:
+Technology: FastAPI, PostgreSQL, JWT, OAuth2  
+Responsibilities:
 - User registration and login
 - JWT token generation and validation
 - OAuth2 integration (Google)
@@ -103,8 +103,8 @@ SchemaSage is built as a **distributed microservices platform** designed for ent
 - Rate limiting
 
 ### 2. Schema Detection Service
-**Technology**: FastAPI, AI Integration (GPT-4/Gemini), Pandas  
-**Responsibilities**:
+Technology: FastAPI, AI Integration (GPT-4/Gemini), Pandas  
+Responsibilities:
 - Multi-format file parsing (JSON, CSV, XML, YAML)
 - AI-powered schema inference
 - Cross-dataset relationship discovery
@@ -113,8 +113,8 @@ SchemaSage is built as a **distributed microservices platform** designed for ent
 - Schema versioning and history
 
 ### 3. Code Generation Service
-**Technology**: FastAPI, Jinja2, AI Integration  
-**Responsibilities**:
+Technology: FastAPI, Jinja2, AI Integration  
+Responsibilities:
 - Multi-language code generation (9+ formats)
 - Template engine management
 - API scaffolding (FastAPI, Express.js, Spring Boot)
@@ -123,8 +123,8 @@ SchemaSage is built as a **distributed microservices platform** designed for ent
 - Code optimization suggestions
 
 ### 4. Database Migration Service
-**Technology**: FastAPI, SQLAlchemy, Cloud SDKs  
-**Responsibilities**:
+Technology: FastAPI, SQLAlchemy, Cloud SDKs  
+Responsibilities:
 - Multi-database connectivity (PostgreSQL, MySQL, etc.)
 - Cloud migration planning (AWS, Azure, GCP)
 - Schema and data migration
@@ -133,8 +133,8 @@ SchemaSage is built as a **distributed microservices platform** designed for ent
 - Rollback strategies
 
 ### 5. Project Management Service
-**Technology**: FastAPI, PostgreSQL, S3 Integration  
-**Responsibilities**:
+Technology: FastAPI, PostgreSQL, S3 Integration  
+Responsibilities:
 - Multi-tenant project management
 - Team collaboration features
 - Workflow automation
@@ -143,8 +143,8 @@ SchemaSage is built as a **distributed microservices platform** designed for ent
 - Audit trail maintenance
 
 ### 6. WebSocket Real-time Service
-**Technology**: FastAPI WebSockets, Redis  
-**Responsibilities**:
+Technology: FastAPI WebSockets, Redis  
+Responsibilities:
 - Real-time dashboard updates
 - Live collaboration features
 - Push notifications
@@ -153,8 +153,8 @@ SchemaSage is built as a **distributed microservices platform** designed for ent
 - Statistics streaming
 
 ### 7. AI Chat Service
-**Technology**: FastAPI, OpenAI API, Gemini API  
-**Responsibilities**:
+Technology: FastAPI, OpenAI API, Gemini API  
+Responsibilities:
 - Context-aware AI assistance
 - Multi-provider AI integration
 - Schema-specific help
@@ -199,45 +199,45 @@ Connection → Migration → Cloud → IaC Generation → Data Sync → Testing
 ## Security Architecture
 
 ### Authentication & Authorization
-- **JWT-based authentication** with refresh tokens
-- **OAuth2 integration** (Google, extensible to others)
-- **Role-based access control** (Admin, User, Viewer)
-- **API key management** for service-to-service communication
+- JWT-based authentication with refresh tokens
+- OAuth2 integration (Google, extensible to others)
+- Role-based access control (Admin, User, Viewer)
+- API key management for service-to-service communication
 
 ### Data Security
-- **AES-256 encryption** for sensitive data at rest
-- **TLS 1.3** for all data in transit
-- **Database encryption** with PostgreSQL native features
-- **Secure environment variable** management
+- AES-256 encryption for sensitive data at rest
+- TLS 1.3 for all data in transit
+- Database encryption with PostgreSQL native features
+- Secure environment variable management
 
 ### Infrastructure Security
-- **Container isolation** with Docker
-- **Network segmentation** between services
-- **Rate limiting** and DDoS protection
-- **Security headers** and CORS policies
-- **Regular security audits** and vulnerability scanning
+- Container isolation with Docker
+- Network segmentation between services
+- Rate limiting and DDoS protection
+- Security headers and CORS policies
+- Regular security audits and vulnerability scanning
 
 ## Scalability & Performance
 
 ### Horizontal Scaling
-- **Microservices independence** allows individual scaling
-- **Load balancing** through API Gateway
-- **Database connection pooling** for optimal resource usage
-- **Redis caching** for frequently accessed data
+- Microservices independence allows individual scaling
+- Load balancing through API Gateway
+- Database connection pooling for optimal resource usage
+- Redis caching for frequently accessed data
 
 ### Performance Optimization
-- **Async/await patterns** throughout the codebase
-- **Background job processing** for heavy operations
-- **CDN integration** for static assets
-- **Database indexing** and query optimization
-- **Response caching** strategies
+- Async/await patterns throughout the codebase
+- Background job processing for heavy operations
+- CDN integration for static assets
+- Database indexing and query optimization
+- Response caching strategies
 
 ### Monitoring & Observability
-- **Health check endpoints** for all services
-- **Centralized logging** with structured JSON logs
-- **Performance metrics** collection
-- **Error tracking** and alerting
-- **Real-time dashboard** monitoring
+- Health check endpoints for all services
+- Centralized logging with structured JSON logs
+- Performance metrics collection
+- Error tracking and alerting
+- Real-time dashboard monitoring
 
 ## Deployment Architecture
 
@@ -252,49 +252,49 @@ GitHub → CI/CD Pipeline → Docker Registry → Heroku Deployment → Monitori
 ```
 
 ### Infrastructure as Code
-- **Docker containerization** for all services
-- **Environment-specific configurations**
-- **Automated deployment** pipelines
-- **Blue-green deployment** strategies
-- **Rollback capabilities**
+- Docker containerization for all services
+- Environment-specific configurations
+- Automated deployment pipelines
+- Blue-green deployment strategies
+- Rollback capabilities
 
 ## Technology Decisions & Rationale
 
 ### Why FastAPI?
-- **High performance** async capabilities
-- **Automatic API documentation** generation
-- **Type safety** with Pydantic integration
-- **Easy testing** and development experience
+- High performance async capabilities
+- Automatic API documentation generation
+- Type safety with Pydantic integration
+- Easy testing and development experience
 
 ### Why Microservices?
-- **Independent deployments** and scaling
-- **Technology diversity** (different services can use different stacks)
-- **Fault isolation** (one service failure doesn't bring down the system)
-- **Team autonomy** and development speed
+- Independent deployments and scaling
+- Technology diversity (different services can use different stacks)
+- Fault isolation (one service failure doesn't bring down the system)
+- Team autonomy and development speed
 
 ### Why PostgreSQL?
-- **ACID compliance** for data integrity
-- **Advanced features** (JSON support, full-text search)
-- **Excellent performance** and reliability
-- **Rich ecosystem** and tooling
+- ACID compliance for data integrity
+- Advanced features (JSON support, full-text search)
+- Excellent performance and reliability
+- Rich ecosystem and tooling
 
 ### Why Dual AI Providers?
-- **Redundancy** and reliability
-- **Cost optimization** through intelligent routing
-- **Feature diversity** (different AI models excel at different tasks)
-- **Vendor independence** and risk mitigation
+- Redundancy and reliability
+- Cost optimization through intelligent routing
+- Feature diversity (different AI models excel at different tasks)
+- Vendor independence and risk mitigation
 
 ## Future Architecture Considerations
 
 ### Planned Enhancements
-- **Kubernetes migration** for better orchestration
-- **Event-driven architecture** with message queues
-- **GraphQL integration** for flexible data fetching
-- **Multi-region deployment** for global availability
-- **Enhanced AI capabilities** with custom model training
+- Kubernetes migration for better orchestration
+- Event-driven architecture with message queues
+- GraphQL integration for flexible data fetching
+- Multi-region deployment for global availability
+- Enhanced AI capabilities with custom model training
 
 ### Scalability Roadmap
-- **Auto-scaling** based on demand
-- **Database sharding** for large-scale data
-- **Caching layer optimization**
-- **Performance profiling** and bottleneck identification
+- Auto-scaling based on demand
+- Database sharding for large-scale data
+- Caching layer optimization
+- Performance profiling and bottleneck identification

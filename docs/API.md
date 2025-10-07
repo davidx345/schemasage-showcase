@@ -15,7 +15,7 @@ Create a new user account.
 }
 ```
 
-**Response:**
+Response:
 ```json
 {
   "access_token": "eyJ0eXAiOiJKV1QiLCJhbGc...",
@@ -37,7 +37,7 @@ Authenticate user and receive JWT token.
 #### GET `/api/auth/me`
 Get current user profile (requires authentication).
 
-**Headers:** `Authorization: Bearer <token>`
+Headers: `Authorization: Bearer <token>`
 
 ---
 
@@ -58,7 +58,7 @@ Detect schema from structured data.
 }
 ```
 
-**Response:**
+Response:
 ```json
 {
   "detected_schema": {
@@ -91,7 +91,7 @@ Detect schema from structured data.
 #### POST `/api/schema/detect/file`
 Upload and analyze file for schema detection.
 
-**Form Data:**
+Form Data:
 - `file`: CSV, JSON, XML, or YAML file
 - `table_name`: Optional table name
 - `enable_ai_enhancement`: Boolean
@@ -156,7 +156,7 @@ Generate code from database schema.
 }
 ```
 
-**Response:**
+Response:
 ```json
 {
   "code": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\n\nBase = declarative_base()\n\nclass Users(Base):\n    __tablename__ = 'users'\n    \n    id = Column(Integer, primary_key=True)",
@@ -172,7 +172,7 @@ Generate code from database schema.
 #### GET `/api/generate/formats`
 Get list of supported code generation formats.
 
-**Response:**
+Response:
 ```json
 {
   "formats": [
@@ -223,7 +223,7 @@ Test database connectivity.
 }
 ```
 
-**Response:**
+Response:
 ```json
 {
   "status": "success",
@@ -302,7 +302,7 @@ Create a new project.
 #### GET `/api/projects/{project_id}`
 Get project details.
 
-**Response:**
+Response:
 ```json
 {
   "id": "proj_123",
@@ -369,7 +369,7 @@ Get AI assistance for schema-related questions.
 }
 ```
 
-**Response:**
+Response:
 ```json
 {
   "response": "For the users table, I recommend adding these indexes:\n1. Unique index on email column for login queries\n2. Consider partial indexes if you have soft deletes\n3. Add composite indexes for frequently queried column combinations",
@@ -389,7 +389,7 @@ Get AI assistance for schema-related questions.
 #### WS `/ws/{user_id}`
 Connect to real-time updates.
 
-**Connection Message:**
+Connection Message:
 ```json
 {
   "type": "auth",
@@ -398,7 +398,7 @@ Connect to real-time updates.
 }
 ```
 
-**Incoming Messages:**
+Incoming Messages:
 ```json
 {
   "type": "stats_update",
@@ -469,10 +469,10 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...
 
 API requests are rate limited to prevent abuse:
 
-- **Authentication endpoints**: 5 requests per minute
-- **Schema detection**: 10 requests per minute
-- **Code generation**: 20 requests per minute
-- **Other endpoints**: 100 requests per minute
+- Authentication endpoints: 5 requests per minute
+- Schema detection: 10 requests per minute
+- Code generation: 20 requests per minute
+- Other endpoints: 100 requests per minute
 
 Rate limit headers are included in responses:
 
