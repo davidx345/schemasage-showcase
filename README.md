@@ -70,12 +70,12 @@ SchemaSage is a comprehensive **data engineering and cloud migration platform** 
 └─────────────────────────┼─────────┼───────────┼───────────┼───────────────┘
                           │         │           │           │                
 ┌─────────────────────────┼─────────┼───────────┼───────────┼───────────────┐
-│                    Microservices Layer                                     │
+│                    Microservices Layer                                    │
 ├─────────────────────────┼─────────┼───────────┼───────────┼───────────────┤
 │  Authentication    │  Schema     │  Code      │ Database  │ Project       │
 │  - JWT/OAuth       │  Detection  │ Generation │ Migration │ Management    │
-│  - User Management │  - AI Analysis │ - Multi-Lang │ - Cloud Sync │ - Teams   │
-│  - Role Control    │  - Relationships │ - Templates │ - Automation │ - Workflows │
+│  - User Management │ -AI Analysis│-Multi-Lang │-Cloud Sync│ -Teams        │
+│  - Role Control    │-Relationships│ -Templates│-Automation│-Workflows     │
 ├────────────────────┼─────────────┼────────────┼───────────┼───────────────┤
 │  WebSocket         │  AI Chat    │            │           │               │
 │  - Real-time       │  - GPT-4    │            │           │               │
