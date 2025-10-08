@@ -129,35 +129,6 @@ SchemaSage is a comprehensive data engineering and cloud migration platform that
 
 ---
 
-##  Screenshots
-
-### Dashboard Overview
-[Screenshot placeholder - Main dashboard showing real-time statistics]
-
-![Dashboard](./screenshots/dashboard.png)
-
-### Schema Detection & AI Analysis
-[Screenshot placeholder - Schema detection interface with AI insights]
-
-![Schema Detection](./screenshots/schema-detection.png)
-
-### Code Generation Interface
-[Screenshot placeholder - Multi-format code generation]
-
-![Code Generation](./screenshots/code-generation.png)
-
-### Cloud Migration Planner
-[Screenshot placeholder - Migration planning interface]
-
-![Migration Planner](./screenshots/migration-planner.png)
-
-### Real-time Collaboration
-[Screenshot placeholder - WebSocket-powered collaboration]
-
-![Real-time Features](./screenshots/realtime-collaboration.png)
-
----
-
 ##  Live Demo
 
  [Experience SchemaSage Live](https://schemasage.vercel.app)
