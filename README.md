@@ -185,13 +185,11 @@ As the sole architect and developer of SchemaSage, I:
 
 David Ayoola - Full-Stack Engineer & AI Integration Specialist
 
- Email: [davidayo2603@gmail.com](mailto:davidayo2603@gmail.com)  
- LinkedIn: [Connect with me](https://linkedin.com/in/your-profile)  
+ Email: [davidayo2603@gmail.com](mailto:davidayo2603@gmail.com)    
  Live Demo: [schemasage.vercel.app](https://schemasage.vercel.app)
 
 ---
 
-## 📄 License
 
 This showcase repository is for demonstration purposes. The actual SchemaSage platform is proprietary.
 
