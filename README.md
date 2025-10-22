@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)](https://schemasage.vercel.app)
 [![Architecture](https://img.shields.io/badge/📊_Architecture-View_Docs-green?style=for-the-badge)](./docs/ARCHITECTURE.md)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/your-profile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/david-ayodele-ayo)
 
 > Enterprise-grade schema intelligence platform that handles the entire lifecycle from schema detection to cloud deployment, with AI-powered insights and real-time collaboration.
 
